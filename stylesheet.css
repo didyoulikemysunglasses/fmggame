@@ -1,3 +1,25 @@
-body {
-  margin: auto;
+html, body {
+	font-family: verdana, helvetica, serif;
+}
+
+.currentSituationDiv {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.currentSituationTop {
+	flex-grow: 1;
+	overflow: auto;
+}
+
+.currentSituationBottom {
+	border-top: 1px solid black;
+}
+
+.textDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

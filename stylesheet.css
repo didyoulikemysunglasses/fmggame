@@ -25,5 +25,5 @@ html, body {
 }
 
 .textParagraph {
-	white-space: pre;	
+	white-space: pre-line;	
 }

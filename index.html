@@ -5,18 +5,36 @@
     <script src="./game.js"></script>
   </head>
   <body>
-	<div id="currentSituationDiv" class="currentSituationDiv">
-		<div id="currentSituationTop" class="currentSituationTop">
-			<div id="textDiv" class="textDiv">
-				<p id="textParagraph" class="textParagraph">
-					Text. Text. Text.
-				</p>
-			</div>
-		</div>
-		<div id="currentSituationBottom" class="currentSituationBottom">
-			<div id="buttonsDiv" class="buttonsDiv">
+	<div id="mainDiv" class="mainDiv">
+		<div id="leftDiv" class="leftDiv hiddenWindow">
+			<div id="toolbarDiv" class="toolbarDiv">
+				<button id="backToGameButton" class="backToGameButton" onclick="document.getElementById('leftDiv').classList.add('hiddenWindow');document.getElementById('rightDiv').classList.remove('hiddenWindow');">Back To Game</button>
 				<button>Button 1</button>
 				<button>Button 2</button>
+				<button>Button 3</button>
+				<button>Button 4</button>
+				<button>Button 5</button>
+			</div>
+		</div>
+		<div id="rightDiv" class="rightDiv">
+			<div id="currentSituationDiv" class="currentSituationDiv">
+				<div id="currentSituationTop" class="currentSituationTop">
+					<div id="textDiv" class="textDiv">
+						<button id="checkStatsButton" class="checkStatsButton" onclick="document.getElementById('rightDiv').classList.add('hiddenWindow');document.getElementById('leftDiv').classList.remove('hiddenWindow');">Check Stats</button>
+						<p id="textParagraph" class="textParagraph">
+							Text. Text. Text.
+						</p>
+					</div>
+				</div>
+				<div id="currentSituationBottom" class="currentSituationBottom">
+					<div id="buttonsDiv" class="buttonsDiv">
+						<button>Button 1</button>
+						<button>Button 2</button>
+						<button>Button 3</button>
+						<button>Button 4</button>
+						<button>Button 5</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

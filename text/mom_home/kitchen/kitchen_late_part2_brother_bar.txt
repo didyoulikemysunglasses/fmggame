@@ -1,0 +1,17 @@
+%gameData.npcs.brother.name% comes stumbling in through the door drunkenly.
+
+"What's up, bro?" I say, with a slight grin on my face.
+
+"I am feeling NICE... Nice! nice! nice..." %gameData.npcs.brother.name% exclaims as his grabs a glass and begins filling it with water using the sink.
+
+Once it's filled, he goes to take a sip, and pours half of it on himself.
+
+"Did they uh... -give you enough to drink at the bar?" I quip.
+
+"Oh yeah... -they took care of me there!" He says, oblivious to my comment.
+
+"Someone's gotta..." I say, as he heads upstairs...
+
+I hear the sound of his door crashing shut.
+
+Good night, %gameData.npcs.brother.name%.

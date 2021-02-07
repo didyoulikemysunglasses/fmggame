@@ -19,27 +19,31 @@ async function getGameData() {
 	return gameData;
 }
 
+async function getStaticData() {
+	if (!this.staticData) {
+		const startingDataResponse = await fetch('./static-data.json');
+		staticDataObject = await startingDataResponse.json();
+		this.staticData = staticDataObject;
+	}
+	
+	return this.staticData;
+}
+
 async function parseTextAndInsertDataValues(text) {
-	const regex = /%[A-Za-z0-9_.-]+%/g;
+	const regex = /%[A-Za-z0-9_().-]+%/g;
 	const matches = text.match(regex);
 	
 	if (matches) {
 		const gameData = await this.getGameData();
+		const staticData = await this.getStaticData();
+		
 		const repeats = {};
 	
 		for (let i = 0; i < matches.length; i++) {
 			const match = matches[i];
 			if (!repeats[match]) {
 				const withoutPercent = match.substring(1, match.length - 1);
-				const pathToValue = withoutPercent.split('.');
-				
-				var value = gameData;
-				for (let j = 0; j < pathToValue.length; j++) {
-					const name = pathToValue[j];
-					value = value[name];
-				}
-				
-				repeats[match] = value;
+				repeats[match] = eval(withoutPercent);
 			}
 			
 			text = text.replace(match, repeats[match]);
@@ -55,6 +59,7 @@ function clearChoiceButtons() {
 
 async function createChoiceButtons(gameData, choices) {
 	const self = this;
+	const staticData = await this.getStaticData();
     for (let j = 0; j < choices.length; j++) {
 		const singleChoice = choices[j];
 		// Only continue if the condition evaluates to true.
@@ -67,6 +72,7 @@ async function createChoiceButtons(gameData, choices) {
 					if (!singleChoice.backButton && !nestedChoices[nestedChoices.length - 1].backButton) {
 						nestedChoices.push(
 							{
+								condition: 'true',
 								choiceString: 'Back',
 								backButton: true,
 								additionalChoices: choices
@@ -106,6 +112,8 @@ async function createChoiceButtons(gameData, choices) {
 
 async function loadCurrentScene() {
 	this.clearChoiceButtons();
+	
+	document.getElementById('textParagraph').innerHTML = '';
 
 	// Get Current Game Data.
 	const gameData = await this.getGameData();

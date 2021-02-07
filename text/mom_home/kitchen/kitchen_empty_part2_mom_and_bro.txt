@@ -1,0 +1,3 @@
+I don't have the whole place to myself though...
+
+Both Mom and %gameData.npcs.brother.name% are in their rooms up there.

@@ -1,5 +1,7 @@
 I head outside.
 
+It's %gameData.timeOfDay% right now...
+
 God it sucks out here...
 
 What should I do?

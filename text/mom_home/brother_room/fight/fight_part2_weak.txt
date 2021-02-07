@@ -26,4 +26,4 @@ Fuck!
 
 I was sent straight to the floor with a single punch from him...
 
-"It means that I'm not afraid to hit you. Now get out..." %brother.name% grumbles.
+"It means that I'm not afraid to hit you. Now get out..." %gameData.npcs.brother.name% grumbles.

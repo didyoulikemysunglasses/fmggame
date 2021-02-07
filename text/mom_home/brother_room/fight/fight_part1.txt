@@ -1,4 +1,4 @@
-%player.name% starts walking towards me.
+%gameData.npcs.brother.name% starts walking towards me.
 
 I've had enough of his shit.
 

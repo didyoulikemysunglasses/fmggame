@@ -1,0 +1,7 @@
+I head into the kitchen.
+
+%gameData.npcs.brother.name% is watching TV...
+
+He's watching one of those shows that show funny clips from the internet with unfunny commentary connecting them together...
+
+Doesn't he know he can just go upstairs and watch those clips on the computer?

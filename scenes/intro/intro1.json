@@ -11,6 +11,10 @@
 			"choiceString": "Go to next day",
 			"gameDataModifications": [
 				{
+					"name": "currentDay",
+					"dynamicValue": "staticData.nextDay[gameData.currentDay]"
+				},
+				{
 					"name": "currentScene",
 					"staticValue": "./scenes/intro/intro2.json"
 				}

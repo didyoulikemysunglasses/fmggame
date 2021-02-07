@@ -19,6 +19,10 @@
 					"staticValue": "true"
 				},
 				{
+					"name": "timeOfDay",
+					"dynamicValue": "eval(staticData.advanceTimeOfDay)"
+				},
+				{
 					"name": "currentScene",
 					"staticValue": "./scenes/outside/outside.json"
 				}

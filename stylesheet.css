@@ -2,6 +2,74 @@ html, body {
 	font-family: verdana, helvetica, serif;
 }
 
+button {
+	min-width: 500px;
+	min-height: 30px;
+	background-color: white;
+	border: 1px solid black;
+	box-shadow: 1px 1px #888888;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #DDDDDD;
+}
+
+button:active {
+	background-color: #BBBBBB;
+}
+
+.mainDiv {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.leftDiv {
+	max-width:500px;
+	border-right: 1px solid black;
+}
+
+.toolbarDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+.rightDiv {
+	flex-grow: 1;
+}
+
+.backToGameButton {
+	display: none;
+}
+
+.checkStatsButton {
+	display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+	body {
+		background-color: lightblue;
+	}
+  
+	.backToGameButton {
+		display: inline-block;
+	}
+
+	.checkStatsButton {
+		display: inline-block;
+	}
+	
+	.hiddenWindow {
+		display: none;
+	}
+	
+	.leftDiv {
+		max-width:1100px;
+		border-right: none;
+	}
+}
+
 .currentSituationDiv {
 	display: flex;
 	flex-direction: column;
@@ -26,4 +94,10 @@ html, body {
 
 .textParagraph {
 	white-space: pre-line;	
+}
+
+.buttonsDiv {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }

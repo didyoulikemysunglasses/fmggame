@@ -1,19 +1,15 @@
 <html>
   <head>
     <title>Test Game</title>
-    <link href="./stylesheet.css" rel="stylesheet">
-    <script src="./game.js"></script>
+    <link href="./css/stylesheet.css" rel="stylesheet">
+    <script src="./js/game.js"></script>
   </head>
   <body>
 	<div id="mainDiv" class="mainDiv">
 		<div id="leftDiv" class="leftDiv hiddenWindow">
 			<div id="toolbarDiv" class="toolbarDiv">
 				<button id="backToGameButton" class="backToGameButton" onclick="document.getElementById('leftDiv').classList.add('hiddenWindow');document.getElementById('rightDiv').classList.remove('hiddenWindow');">Back To Game</button>
-				<button>Button 1</button>
-				<button>Button 2</button>
-				<button>Button 3</button>
-				<button>Button 4</button>
-				<button>Button 5</button>
+				<button onclick="restartGame()">Start Over</button>
 			</div>
 		</div>
 		<div id="rightDiv" class="rightDiv">
@@ -22,17 +18,12 @@
 					<div id="textDiv" class="textDiv">
 						<button id="checkStatsButton" class="checkStatsButton" onclick="document.getElementById('rightDiv').classList.add('hiddenWindow');document.getElementById('leftDiv').classList.remove('hiddenWindow');">Check Stats</button>
 						<p id="textParagraph" class="textParagraph">
-							Text. Text. Text.
+							Loading...
 						</p>
 					</div>
 				</div>
 				<div id="currentSituationBottom" class="currentSituationBottom">
 					<div id="buttonsDiv" class="buttonsDiv">
-						<button>Button 1</button>
-						<button>Button 2</button>
-						<button>Button 3</button>
-						<button>Button 4</button>
-						<button>Button 5</button>
 					</div>
 				</div>
 			</div>

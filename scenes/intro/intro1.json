@@ -1,0 +1,20 @@
+{
+	"displayText": [
+		{
+			"conditions": [],
+			"textLocation": "./text/intro/intro1.txt"
+		}
+	],
+	"choices": [
+		{
+			"conditions": [],
+			"choiceString": "Go to next day",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"value": "./scenes/intro/intro2.json"
+				}
+			]
+		}
+	]
+}

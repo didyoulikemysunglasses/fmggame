@@ -1,0 +1,30 @@
+{
+	"displayText": [
+		{
+			"conditions": [],
+			"textLocation": "./text/mom_home/brother_room/caught/caught_weak.txt"
+		}
+	],
+	"choices": [
+		{
+			"conditions": [],
+			"choiceString": "Fight",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"value": "./scenes/mom_home/brother_room_fight.json"
+				}
+			]
+		},
+		{
+			"conditions": [],
+			"choiceString": "Run Away",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"value": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

@@ -4,7 +4,7 @@ html, body {
 
 button {
 	min-width: 500px;
-	min-height: 35px;
+	min-height: 3em;
 	background-color: white;
 	border: 1px solid black;
 	box-shadow: 1px 1px #888888;
@@ -50,8 +50,7 @@ button:active {
 @media only screen and (max-width: 1100px) {
 	button {
 		width: 100%;
-		min-height: 100px;
-		font-size: 32px;
+		font-size: 24px;
 	}
 	
 	.backToGameButton {
@@ -92,11 +91,12 @@ button:active {
 .textDiv {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
 .textParagraph {
-	white-space: pre-line;	
+	white-space: pre-line;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 .buttonsDiv {

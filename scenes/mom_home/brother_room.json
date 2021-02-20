@@ -1,0 +1,30 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/brother_room/brother_room_description.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Use the bench press",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/brother_room_bench_caught.json"
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Leave",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

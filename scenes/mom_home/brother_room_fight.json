@@ -1,0 +1,24 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/brother_room/fight/fight_part1.txt"
+		},
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/brother_room/fight/fight_part2_weak.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Slump back downstairs",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/outside/jog/jog_lower1.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Okay, enough of that...",
+			"gameDataModifications": [
+				{
+					"name": "player.muscle.lower.exp",
+					"dynamicValue": "gameData.player.muscle.lower.exp + 10 + Math.floor(Math.random() * 6)"
+				},
+				{
+					"name": "player.muscle.lower.worked",
+					"staticValue": "true"
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/outside/outside.json"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/outside/outside.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Go Somewhere",
+			"additionalChoices": [
+				{
+					"condition": "true",
+					"choiceString": "Go to Home",
+					"gameDataModifications": [
+						{
+							"name": "currentScene",
+							"staticValue": "./scenes/mom_home/kitchen.json"
+						}
+					]
+				},
+				{
+					"condition": "true",
+					"choiceString": "Go to the Gym",
+					"gameDataModifications": [
+						{
+							"name": "currentScene",
+							"staticValue": "./scenes/gym/gym_entrance.json"
+						}
+					]
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Go for a jog",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/outside/jog.json"
+				}
+			]
+		}
+	]
+}

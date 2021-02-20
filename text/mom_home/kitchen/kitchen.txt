@@ -1,0 +1,7 @@
+Mom and %brother.name% are downstairs sitting at the kitchen table eating breakfast.
+
+%brother.name% is dressed in his construction worker uniform.
+
+"Maybe you can get your sister a Job with you in construction, %brother.name%?" Mom asks.
+
+"Yeah right!" %brother.name% laughs. "I bet a little shrimp like her couldn't even lift a hammer!"

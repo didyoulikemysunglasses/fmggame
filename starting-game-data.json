@@ -1,0 +1,30 @@
+{
+	"player": { 
+		"name": "Joni",
+		"money": 0,
+		"muscle": {
+			"upper": {
+				"level": 1,
+				"exp": 0,
+				"worked": false,
+				"leveledUp": false,
+				"appearanceChanged": false
+			},
+			"lower": {
+				"level": 1,
+				"exp": 0,
+				"worked": false,
+				"leveledUp": false,
+				"appearanceChanged": false
+			}
+		},
+		"wakingUp": false,
+		"selfImageRating": 0
+	},
+	"brother": { 
+		"name": "Tom"
+	},
+	"timeOfDay": "this morning",
+	"currentScene": "./scenes/intro/intro1.json",
+	"time": 0
+}

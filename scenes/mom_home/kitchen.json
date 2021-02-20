@@ -1,0 +1,40 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/kitchen/kitchen.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Go to my room",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/player_room.json"
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Go to %brother.name%'s room",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/brother_room.json"
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Leave the house",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/outside/outside.json"
+				}
+			]
+		}
+	]
+}

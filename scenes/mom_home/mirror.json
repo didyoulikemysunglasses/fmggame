@@ -1,0 +1,120 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part1.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 1",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper1.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 2",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper2.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 3",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper3.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 4",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper4.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 5",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper5.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 6",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper6.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 7",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper7.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 8",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper8.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level === 9",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper9.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.level >= 10",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2_upper10.txt"
+		},
+		{
+			"condition": "(gameData.player.muscle.lower.level + 3) < gameData.player.muscle.upper.level",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2andahalf_imbalance_lower.txt"
+		},
+		{
+			"condition": "(gameData.player.muscle.upper.level + 3) < gameData.player.muscle.lower.level",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part2andahalf_imbalance_upper.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 1",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower1.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 2",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower2.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 3",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower3.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 4",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower4.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 5",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower5.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 6",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower6.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 7",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower7.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 8",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower8.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level === 9",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower9.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.level >= 10",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part3_lower10.txt"
+		},
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part4_negative.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Okay... Enough of that!",
+			"gameDataModifications": [
+				{
+					"name": "player.muscle.upper.appearanceChanged",
+					"staticValue": false
+				},
+				{
+					"name": "player.muscle.lower.appearanceChanged",
+					"staticValue": false
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/player_room.json"
+				}
+			]
+		}
+	]
+}

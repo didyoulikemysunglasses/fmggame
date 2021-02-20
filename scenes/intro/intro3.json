@@ -1,0 +1,20 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/intro/intro3.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Go downstairs",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

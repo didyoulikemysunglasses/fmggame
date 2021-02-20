@@ -1,0 +1,52 @@
+{
+	"displayText": [
+		{
+			"condition": "gameData.player.wakingUp",
+			"textLocation": "./text/mom_home/player_room/player_room_wakeup.txt"
+		},
+		{
+			"condition": "!gameData.player.wakingUp",
+			"textLocation": "./text/mom_home/player_room/player_room_description.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.appearanceChanged || gameData.player.muscle.lower.appearanceChanged",
+			"textLocation": "./text/mom_home/player_room/player_room_appearance_changed.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Go to bed",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/sleep.json"
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Check the mirror",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/mirror.json"
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Go downstairs",
+			"gameDataModifications": [
+				{
+					"name": "player.wakingUp",
+					"staticValue": false
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

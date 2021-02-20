@@ -1,0 +1,76 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/player_room/sleep/sleep_part1.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.upper.worked",
+			"textLocation": "./text/mom_home/player_room/sleep/sleep_part2_lower_increase.txt"
+		},
+		{
+			"condition": "gameData.player.muscle.lower.worked",
+			"textLocation": "./text/mom_home/player_room/sleep/sleep_part2_lower_increase.txt"
+		},
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/player_room/sleep/sleep_part3.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Wake Up",
+			"gameDataModifications": [
+				{
+					"name": "player.muscle.upper.leveledUp",
+					"dynamicValue": "(20 + ((10 * gameData.player.muscle.upper.level) * Math.log10(10 * gameData.player.muscle.upper.level))) <= gameData.player.muscle.upper.exp"
+				},
+				{
+					"name": "player.muscle.upper.level",
+					"dynamicValue": "gameData.player.muscle.upper.leveledUp ? gameData.player.muscle.upper.level + 1 : gameData.player.muscle.upper.level"
+				},
+				{
+					"name": "player.muscle.upper.exp",
+					"dynamicValue": "gameData.player.muscle.upper.leveledUp ? 0 : gameData.player.muscle.upper.exp"
+				},
+				{
+					"name": "player.muscle.upper.appearanceChanged",
+					"dynamicValue": "gameData.player.muscle.upper.leveledUp ? true : gameData.player.muscle.upper.appearanceChanged"
+				},
+				{
+					"name": "player.muscle.upper.worked",
+					"staticValue": false
+				},
+				{
+					"name": "player.muscle.lower.leveledUp",
+					"dynamicValue": "(20 + ((10 * gameData.player.muscle.lower.level) * Math.log10(10 * gameData.player.muscle.lower.level))) <= gameData.player.muscle.lower.exp"
+				},
+				{
+					"name": "player.muscle.lower.level",
+					"dynamicValue": "gameData.player.muscle.lower.leveledUp ? gameData.player.muscle.lower.level + 1 : gameData.player.muscle.lower.level"
+				},
+				{
+					"name": "player.muscle.lower.exp",
+					"dynamicValue": "gameData.player.muscle.lower.leveledUp ? 0 : gameData.player.muscle.lower.exp"
+				},
+				{
+					"name": "player.muscle.lower.appearanceChanged",
+					"dynamicValue": "gameData.player.muscle.lower.leveledUp ? true : gameData.player.muscle.lower.appearanceChanged"
+				},
+				{
+					"name": "player.muscle.lower.worked",
+					"staticValue": false
+				},
+				{
+					"name": "player.wakingUp",
+					"staticValue": true
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/player_room.json"
+				}
+			]
+		}
+	]
+}

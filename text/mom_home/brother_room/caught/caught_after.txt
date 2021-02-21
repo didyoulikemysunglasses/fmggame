@@ -1,0 +1,9 @@
+As I finish my last set, I re-rack the bar...
+
+Damn... That was a good workout...
+
+I sit up from the bench and immediately come face to face with %gameData.npcs.brother.name%.
+
+Oh shit...
+
+"%gameData.player.name%, Get the fuck out of my room!"

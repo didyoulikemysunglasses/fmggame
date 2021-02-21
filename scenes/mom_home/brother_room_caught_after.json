@@ -1,0 +1,38 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/brother_room/caught/caught_after.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Fight",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/brother_room_fight.json"
+				}
+			]
+		},
+		{
+			"condition": "true",
+			"choiceString": "Run Away",
+			"gameDataModifications": [
+                {
+					"name": "npcs.brother.currentLocation",
+					"staticValue": "room"
+                },
+                {
+					"name": "npcs.brother.roomLocked",
+					"staticValue": true
+                },
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

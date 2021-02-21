@@ -2,7 +2,7 @@
 	"displayText": [
 		{
 			"condition": "true",
-			"textLocation": "./text/mom_home/brother_room/caught/caught_weak.txt"
+			"textLocation": "./text/mom_home/brother_room/caught/caught_before.txt"
 		}
 	],
 	"choices": [
@@ -20,6 +20,14 @@
 			"condition": "true",
 			"choiceString": "Run Away",
 			"gameDataModifications": [
+                {
+					"name": "npcs.brother.currentLocation",
+					"staticValue": "room"
+                },
+                {
+					"name": "npcs.brother.roomLocked",
+					"staticValue": true
+                },
 				{
 					"name": "currentScene",
 					"staticValue": "./scenes/mom_home/kitchen.json"

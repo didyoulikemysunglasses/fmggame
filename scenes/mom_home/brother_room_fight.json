@@ -14,6 +14,14 @@
 			"condition": "true",
 			"choiceString": "Slump back downstairs",
 			"gameDataModifications": [
+                {
+					"name": "npcs.brother.currentLocation",
+					"staticValue": "room"
+                },
+                {
+					"name": "npcs.brother.roomLocked",
+					"staticValue": true
+                },
 				{
 					"name": "currentScene",
 					"staticValue": "./scenes/mom_home/kitchen.json"

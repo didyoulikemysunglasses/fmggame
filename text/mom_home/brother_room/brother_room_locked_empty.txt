@@ -1,0 +1,11 @@
+I go to turn the knob of %gameData.npcs.brother.name%'s room.
+
+...
+
+Shit.
+
+The door won't open...
+
+%gameData.npcs.brother.name% locked the door to his room.
+
+He must still be mad about me using his bench press...

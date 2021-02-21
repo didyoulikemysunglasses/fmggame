@@ -35,16 +35,7 @@
 		"deadlift": "45 + (10 * (gameData.player.muscle.lower.level - 1)) + (10 * (gameData.player.muscle.upper.level - 1))",
 		"dumbbellCurl": "5 + (Math.floor((2 * (gameData.player.muscle.upper.level - 1)) / 5) * 5)",
 		"dumbbellLunge": "5 + (Math.floor((4 * (gameData.player.muscle.upper.level - 1)) / 5) * 5)"
-	},
-	"sizeFormulas": {
-		"arms": "8.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((14 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((14 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2))",
-		"chest": "28.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((24 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((24 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2))",
-		"waist": "24.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((4 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((4 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2))",
-		"hips": "26.0 + (gameData.player.muscle.lower.level > 25 ? (Math.round((12 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((12 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))",
-		"thighs": "15.0 + (gameData.player.muscle.lower.level > 25 ? (Math.round((20 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((20 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))",
-		"calves": "9.0 + (gameData.player.muscle.lower.level > 25 ? (Math.round((15 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((15 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))",
-		"weight": "80.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((85 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((85 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2)) + (gameData.player.muscle.lower.level > 25 ? (Math.round((85 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((85 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))"
-	},
+    },
 	"dayOfTheWeekToScheduleDay": {
 		"Monday": "Weekday",
 		"Tuesday": "Weekday",
@@ -57,28 +48,28 @@
 	"npcSchedules": {
 		"brother": {
 			"Weekday": {
-				"morning": "'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; 'kitchen'",
 				"afternoon": "'work'",
-				"evening": "(Math.random() * 5) ? 'kitchen' : 'bar'",
+				"evening": "(Math.random() * 4) ? 'bar' : 'kitchen'",
 				"night-time": "gameData.npcs.brother.previousLocation === 'bar' ? 'kitchen' : 'room'",
 				"really fucking late into the night": "'room'"
 			},
 			"Friday": {
-				"morning": "'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; 'kitchen'",
 				"afternoon": "'work'",
 				"evening": "'bar'",
 				"night-time": "'bar'",
 				"really fucking late into the night": "'kitchen'"
 			},
 			"Saturday": {
-				"morning": "(Math.random() * 2) ? 'room' : 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; (Math.random() * 2) ? 'room' : 'kitchen'",
 				"afternoon": "(Math.random() * 2) ? 'jog' : 'gym'",
 				"evening": "'bar'",
 				"night-time": "'bar'",
 				"really fucking late into the night": "'bar'"
 			},
 			"Sunday": {
-				"morning": "(Math.random() * 2) ? 'room' : 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; (Math.random() * 2) ? 'room' : 'kitchen'",
 				"afternoon": "'kitchen'",
 				"evening": "(Math.random() * 2) ? 'jog' : 'gym'",
 				"night-time": "'kitchen'",
@@ -89,14 +80,14 @@
 			"Weekday": {
 				"morning": "'kitchen'",
 				"afternoon": "'work'",
-				"evening": "(Math.random() * 10) ? 'work' : 'bar'",
-				"night-time": "gameData.npcs.mom.previousLocation === 'bar' ? 'bar' : ((Math.random() * 5) ? 'kitchen' : 'work')",
+				"evening": "(Math.random() * 10) ? ((Math.random() * 10) ? 'work' : 'kitchen' ) : 'bar'",
+				"night-time": "gameData.npcs.mom.previousLocation === 'bar' ? 'bar' : gameData.npcs.mom.previousLocation === 'kitchen' ? 'kitchen' : ((Math.random() * 5) ? 'kitchen' : 'work')",
 				"really fucking late into the night": "gameData.npcs.mom.previousLocation === 'kitchen' ? 'room' : 'kitchen'"
 			},
 			"Friday": {
 				"morning": "'kitchen'",
 				"afternoon": "'work'",
-				"evening": "(Math.random() * 10) ? 'kitchen' : 'bar'",
+				"evening": "(Math.random() * 5) ? 'kitchen' : 'bar'",
 				"night-time": "gameData.npcs.mom.previousLocation",
 				"really fucking late into the night": "'kitchen'"
 			},
@@ -115,5 +106,14 @@
 				"really fucking late into the night": "'room'"
 			}
 		}
+	},
+	"sizeFormulas": {
+		"arms": "8.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((14 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((14 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2))",
+		"chest": "28.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((24 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((24 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2))",
+		"waist": "24.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((4 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((4 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2))",
+		"hips": "26.0 + (gameData.player.muscle.lower.level > 25 ? (Math.round((12 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((12 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))",
+		"thighs": "15.0 + (gameData.player.muscle.lower.level > 25 ? (Math.round((20 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((20 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))",
+		"calves": "9.0 + (gameData.player.muscle.lower.level > 25 ? (Math.round((15 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((15 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))",
+		"weight": "80.0 + (gameData.player.muscle.upper.level > 25 ? (Math.round((85 * Math.log10((1 + ((gameData.player.muscle.upper.level - 1) * 0.4)))) * 2) / 2) : (Math.round((85 * 0.04 * (gameData.player.muscle.upper.level - 1)) * 2) / 2)) + (gameData.player.muscle.lower.level > 25 ? (Math.round((85 * Math.log10((1 + ((gameData.player.muscle.lower.level - 1) * 0.4)))) * 2) / 2) : (Math.round((85 * 0.04 * (gameData.player.muscle.lower.level - 1)) * 2) / 2))"
 	}
 }

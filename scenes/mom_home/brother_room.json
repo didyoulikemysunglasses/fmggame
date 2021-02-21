@@ -1,18 +1,38 @@
 {
 	"displayText": [
 		{
-			"condition": "true",
-			"textLocation": "./text/mom_home/brother_room/brother_room_description.txt"
+			"condition": "!gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation !== 'room'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_empty.txt"
+        },
+        {
+			"condition": "!gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation === 'room' && gameData.timeOfDay !== 'morning'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_bro_awake.txt"
+        },
+        {
+			"condition": "!gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation === 'room' && gameData.timeOfDay === 'morning'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_bro_sleeping.txt"
+        },
+        {
+			"condition": "gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation !== 'room'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_locked_empty.txt"
+        },
+        {
+			"condition": "gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation === 'room'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_locked_bro.txt"
+        },
+        {
+			"condition": "gameData.timeOfDay === 'really fucking late into the night'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_late.txt"
 		}
 	],
 	"choices": [
 		{
-			"condition": "true",
+			"condition": "!gameData.npcs.brother.roomLocked && gameData.timeOfDay !== 'really fucking late into the night'",
 			"choiceString": "Use the bench press",
 			"gameDataModifications": [
 				{
 					"name": "currentScene",
-					"staticValue": "./scenes/mom_home/brother_room_bench_caught.json"
+					"dynamicValue": "(gameData.npcs.brother.currentLocation === 'room' || gameData.npcs.brother.currentLocation === 'kitchen') ? './scenes/mom_home/brother_room_caught_before.json' : './scenes/mom_home/brother_room_bench.json'"
 				}
 			]
 		},

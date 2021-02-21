@@ -1,0 +1,56 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part1.txt"
+        },
+        {
+			"condition": "eval(staticData.liftingFormulas.benchPress) <= 45",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part2_empty.txt"
+        },
+        {
+			"condition": "eval(staticData.liftingFormulas.benchPress) > 45 && eval(staticData.liftingFormulas.benchPress) < 95",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part2_under_095.txt"
+        },
+        {
+			"condition": "eval(staticData.liftingFormulas.benchPress) >= 95 && eval(staticData.liftingFormulas.benchPress) < 135",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part2_under_135.txt"
+        },
+        {
+			"condition": "eval(staticData.liftingFormulas.benchPress) >= 135 && eval(staticData.liftingFormulas.benchPress) < 185",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part2_under_185.txt"
+        },
+        {
+			"condition": "eval(staticData.liftingFormulas.benchPress) >= 185 && eval(staticData.liftingFormulas.benchPress) <= 255",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part2_under_255.txt"
+        },
+        {
+			"condition": "eval(staticData.liftingFormulas.benchPress) > 255",
+			"textLocation": "./text/mom_home/brother_room/bench/bench_part2_maxed_out.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "My work here is done...",
+			"gameDataModifications": [
+                {
+					"name": "player.muscle.upper.exp",
+					"dynamicValue": "gameData.player.muscle.upper.exp + 10 + Math.floor(Math.random() * 6)"
+				},
+				{
+					"name": "player.muscle.upper.worked",
+					"staticValue": "true"
+				},
+				{
+					"name": "timeOfDay",
+					"dynamicValue": "eval(staticData.advanceTimeOfDay)"
+				},
+				{
+					"name": "currentScene",
+					"dynamicValue": "(gameData.npcs.brother.currentLocation === 'room' || gameData.npcs.brother.currentLocation === 'kitchen') ? './scenes/mom_home/brother_room_caught_after.json' : './scenes/mom_home/brother_room.json'"
+				}
+			]
+		}
+	]
+}

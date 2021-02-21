@@ -41,15 +41,15 @@
 			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_bro.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation !== 'kitchen' && !(staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Weekday' || staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Friday')",
+			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation === 'kitchen'",
+			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_mom_and_bro.txt"
+        },
+        {
+			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation !== 'kitchen' && !(gameData.timeOfDay === 'evening' && (staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Weekday' || staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Friday'))",
 			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_mom.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation === 'kitchen'",
-			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_mom_and_bro.txt"
-		},
-		{
-			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation !== 'kitchen' && (staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Weekday' || staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Friday')",
+			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation !== 'kitchen' && (gameData.timeOfDay === 'evening' && (staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Weekday' || staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Friday'))",
 			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_mom_weekday.txt"
 		},
 		{

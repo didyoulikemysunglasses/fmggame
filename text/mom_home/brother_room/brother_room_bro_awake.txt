@@ -1,0 +1,7 @@
+I walk into %gameData.npcs.brother.name%'s room.
+
+"What's up, sis." %gameData.npcs.brother.name% says casually.
+
+"Not much..."
+
+%gameData.npcs.brother.name% has a bench press in here with a few small weights that can be swapped in and out on the bar in the room...

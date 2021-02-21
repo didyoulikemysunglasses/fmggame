@@ -4,8 +4,16 @@ Time to get swole.
 
 Let's just put some weight on the bar and-
 
-The door quickly swings open.
+-hold on...
+
+...
+
+I don't think I'm alone here...
+
+....
 
 It's %gameData.npcs.brother.name%.
+
+Shit.
 
 "%gameData.player.name%, Get the fuck out of my room!"

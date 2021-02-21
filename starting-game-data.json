@@ -25,7 +25,8 @@
 		"brother": { 
 			"name": "Tom",
 			"currentLocation": "kitchen",
-			"previousLocation": "kitchen"
+            "previousLocation": "kitchen",
+            "roomLocked": false
 		},
 		"mom": {
 			"currentLocation": "kitchen",

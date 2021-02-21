@@ -24,7 +24,7 @@
 			"gameDataModifications": [
 				{
 					"name": "player.muscle.upper.leveledUp",
-					"dynamicValue": "(20 + ((10 * gameData.player.muscle.upper.level) * Math.log10(10 * gameData.player.muscle.upper.level))) <= gameData.player.muscle.upper.exp"
+					"dynamicValue": "eval(staticData.levelUpCheck.upper)"
 				},
 				{
 					"name": "player.muscle.upper.level",
@@ -43,8 +43,12 @@
 					"staticValue": false
 				},
 				{
+					"name": "player.muscle.upper.leveledUp",
+					"staticValue": false
+				},
+				{
 					"name": "player.muscle.lower.leveledUp",
-					"dynamicValue": "(20 + ((10 * gameData.player.muscle.lower.level) * Math.log10(10 * gameData.player.muscle.lower.level))) <= gameData.player.muscle.lower.exp"
+					"dynamicValue": "eval(staticData.levelUpCheck.lower)"
 				},
 				{
 					"name": "player.muscle.lower.level",
@@ -63,8 +67,16 @@
 					"staticValue": false
 				},
 				{
+					"name": "player.muscle.lower.leveledUp",
+					"staticValue": false
+				},
+				{
 					"name": "player.wakingUp",
 					"staticValue": true
+				},
+				{
+					"name": "timeOfDay",
+					"dynamicValue": "eval(staticData.sleepUntilMorning)"
 				},
 				{
 					"name": "currentScene",

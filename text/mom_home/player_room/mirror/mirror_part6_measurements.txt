@@ -1,0 +1,10 @@
+
+
+Measuring my body with tape gives the following measurements:
+
+Arms: %eval(staticData.sizeFormulas.arms)% inches
+Chest: %eval(staticData.sizeFormulas.chest)% inches
+Waist: %eval(staticData.sizeFormulas.waist)% inches
+Hips: %eval(staticData.sizeFormulas.hips)% inches
+Thighs: %eval(staticData.sizeFormulas.thighs)% inches
+Calves: %eval(staticData.sizeFormulas.calves)% inches

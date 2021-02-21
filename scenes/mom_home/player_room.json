@@ -2,7 +2,19 @@
 	"displayText": [
 		{
 			"condition": "gameData.player.wakingUp",
-			"textLocation": "./text/mom_home/player_room/player_room_wakeup.txt"
+			"textLocation": "./text/mom_home/player_room/player_room_wakeup_part1.txt"
+		},
+		{
+			"condition": "gameData.player.wakingUp && gameData.currentDay === 'Monday'",
+			"textLocation": "./text/mom_home/player_room/player_room_wakeup_part2_monday.txt"
+		},
+		{
+			"condition": "gameData.player.wakingUp && (gameData.currentDay === 'Saturday' || gameData.currentDay === 'Sunday')",
+			"textLocation": "./text/mom_home/player_room/player_room_wakeup_part2_saturdaysunday_jobless.txt"
+		},
+		{
+			"condition": "gameData.player.wakingUp",
+			"textLocation": "./text/mom_home/player_room/player_room_wakeup_part3.txt"
 		},
 		{
 			"condition": "!gameData.player.wakingUp",
@@ -35,7 +47,7 @@
 			]
 		},
 		{
-			"condition": "true",
+			"condition": "gameData.timeOfDay !== 'really fucking late into the night'",
 			"choiceString": "Go downstairs",
 			"gameDataModifications": [
 				{

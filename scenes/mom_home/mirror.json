@@ -95,6 +95,14 @@
 		{
 			"condition": "true",
 			"textLocation": "./text/mom_home/player_room/mirror/mirror_part4_negative.txt"
+		},
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part5_scale.txt"
+		},
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/player_room/mirror/mirror_part6_measurements.txt"
 		}
 	],
 	"choices": [

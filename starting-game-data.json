@@ -21,10 +21,19 @@
 		"wakingUp": false,
 		"selfImageRating": 0
 	},
-	"brother": { 
-		"name": "Tom"
+	"npcs": {
+		"brother": { 
+			"name": "Tom",
+			"currentLocation": "kitchen",
+			"previousLocation": "kitchen"
+		},
+		"mom": {
+			"currentLocation": "kitchen",
+			"previousLocation": "kitchen"
+		}
 	},
-	"timeOfDay": "this morning",
+	"currentDay": "Saturday",
+	"timeOfDay": "morning",
 	"currentScene": "./scenes/intro/intro1.json",
 	"time": 0
 }

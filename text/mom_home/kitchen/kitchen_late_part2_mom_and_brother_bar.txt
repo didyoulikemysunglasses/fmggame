@@ -1,0 +1,29 @@
+%gameData.npcs.brother.name% comes stumbling in through the door drunkenly.
+
+-and he's followed by a GIRL???
+
+...
+
+wait... no that's just Mom.
+
+"Hey %gameData.player.name%" she says, waving.
+
+Wait...
+
+-did they go out drinking together?
+
+"I guess we both had rough days at work," %gameData.npcs.brother.name% says "-because we both ended up at the same bar at the end of our shifts..."
+
+"Bedtime..." Mom says sleepily as she stumbles her way upstairs.
+
+After a few moments, I hear her door close.
+
+"Is she going to be alright?" I ask.
+
+"-Of course!" %gameData.npcs.brother.name% says with drunken gusto. "You know, %gameData.player.name%... You really gotta come out drinking with us sometime, man."
+
+He slaps me on the back and heads slowly heads up the stairs.
+
+"I'll think about it."
+
+...

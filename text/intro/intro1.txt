@@ -1,6 +1,6 @@
-My name is %player.name%.
+My name is %gameData.player.name%.
 
-At 5'2" and 100lbs, I am a bone-thin skinny looking girl in my early 20s.
+At 5'2" and %eval(staticData.sizeFormulas.weight)% pounds, I am a bone-thin skinny looking girl in my early 20s.
 
 I graduated highschool a few years back and didn't really do much after... -aside from fucking around on the internet and playing games all day...
 
@@ -16,7 +16,7 @@ I still live with Mom currently...
 
 -for now.
 
-I mean, my older brother, %brother.name%, lives with us too! 
+I mean, my older brother, %gameData.npcs.brother.name%, lives with us too! 
 
 -And he's Jobless too, so if anything, it's up to him to get his shit together first since he's older...
 

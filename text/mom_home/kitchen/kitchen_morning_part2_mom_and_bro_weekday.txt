@@ -1,0 +1,5 @@
+%gameData.npcs.brother.name% is dressed in his construction worker uniform.
+
+"Maybe you can get your sister a Job with you in construction, %gameData.npcs.brother.name%?" Mom asks.
+
+"Yeah right!" %gameData.npcs.brother.name% laughs. "I bet a little shrimp like her couldn't even lift a hammer!"

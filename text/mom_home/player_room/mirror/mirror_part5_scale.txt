@@ -1,0 +1,3 @@
+
+
+Stepping on the Scale, my weight reads: %eval(staticData.sizeFormulas.weight)% pounds.

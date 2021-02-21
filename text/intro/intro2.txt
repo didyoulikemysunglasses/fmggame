@@ -8,21 +8,21 @@ I just can't stop watching them...
 
 While I eat, I hear the door open.
 
-My meathead of an older brother, %brother.name%, walks in with a goofy smile on his face.
+My meathead of an older brother, %gameData.npcs.brother.name%, walks in with a goofy smile on his face.
 
 He towers over both me and Mom at 6'0" tall, at a somewhat solid 180lbs.
 
-"Guess who just landed a Job!" %brother.name% exclaims.
+"Guess who just landed a Job!" %gameData.npcs.brother.name% exclaims.
 
-"OH MY GOODNESS! I am SO happy for you, %brother.name%!" My mom cries, running over to %brother.name% and hugging him tightly.
+"OH MY GOODNESS! I am SO happy for you, %gameData.npcs.brother.name%!" My mom cries, running over to %gameData.npcs.brother.name% and hugging him tightly.
 
 "Hey... Nice job, Bro." I say, trying my best to fake enthusiasm...
 
 Stupid tryhard idiot... now that he's got a job, I'm going to start looking like the fuck-up kid of the family...
 
-"Where are you working?" Mom asks, letting go of %brother.name%.
+"Where are you working?" Mom asks, letting go of %gameData.npcs.brother.name%.
 
-"It's a construction gig, just down the road from here. Full-time with Union benefits." %brother.name% says, putting his hands on his hips proudly.
+"It's a construction gig, just down the road from here. Full-time with Union benefits." %gameData.npcs.brother.name% says, putting his hands on his hips proudly.
 
 "-UNION BENEFITS!" Mom yells, with a couple of claps.
 

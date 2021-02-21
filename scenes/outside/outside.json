@@ -1,13 +1,17 @@
 {
 	"displayText": [
 		{
-			"condition": "true",
+			"condition": "gameData.timeOfDay !== 'really fucking late into the night'",
 			"textLocation": "./text/outside/outside.txt"
+		},
+		{
+			"condition": "gameData.timeOfDay === 'really fucking late into the night'",
+			"textLocation": "./text/outside/outside_late.txt"
 		}
 	],
 	"choices": [
 		{
-			"condition": "true",
+			"condition": "gameData.timeOfDay !== 'really fucking late into the night'",
 			"choiceString": "Go Somewhere",
 			"additionalChoices": [
 				{
@@ -33,12 +37,22 @@
 			]
 		},
 		{
-			"condition": "true",
+			"condition": "gameData.timeOfDay !== 'really fucking late into the night'",
 			"choiceString": "Go for a jog",
 			"gameDataModifications": [
 				{
 					"name": "currentScene",
 					"staticValue": "./scenes/outside/jog.json"
+				}
+			]
+		},
+		{
+			"condition": "gameData.timeOfDay === 'really fucking late into the night'",
+			"choiceString": "Go Home",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
 				}
 			]
 		}

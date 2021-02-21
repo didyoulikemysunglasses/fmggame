@@ -1,0 +1,1 @@
+Mom and %gameData.npcs.brother.name% are sitting at the kitchen table eating breakfast.

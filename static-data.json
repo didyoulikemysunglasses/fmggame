@@ -50,7 +50,7 @@
 			"Weekday": {
 				"morning": "gameData.npcs.brother.roomLocked = false; 'kitchen'",
 				"afternoon": "'work'",
-				"evening": "(Math.random() * 4) ? 'bar' : 'kitchen'",
+				"evening": "Math.floor(Math.random() * 4) ? 'bar' : 'kitchen'",
 				"night-time": "gameData.npcs.brother.previousLocation === 'bar' ? 'kitchen' : 'room'",
 				"really fucking late into the night": "'room'"
 			},
@@ -62,16 +62,16 @@
 				"really fucking late into the night": "'kitchen'"
 			},
 			"Saturday": {
-				"morning": "gameData.npcs.brother.roomLocked = false; (Math.random() * 2) ? 'room' : 'kitchen'",
-				"afternoon": "(Math.random() * 2) ? 'jog' : 'gym'",
+				"morning": "gameData.npcs.brother.roomLocked = false; Math.floor(Math.random() * 2) ? 'room' : 'kitchen'",
+				"afternoon": "Math.floor(Math.random() * 2) ? 'jog' : 'gym'",
 				"evening": "'bar'",
 				"night-time": "'bar'",
 				"really fucking late into the night": "'bar'"
 			},
 			"Sunday": {
-				"morning": "gameData.npcs.brother.roomLocked = false; (Math.random() * 2) ? 'room' : 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; Math.floor(Math.random() * 2) ? 'room' : 'kitchen'",
 				"afternoon": "'kitchen'",
-				"evening": "(Math.random() * 2) ? 'jog' : 'gym'",
+				"evening": "Math.floor(Math.random() * 2) ? 'jog' : 'gym'",
 				"night-time": "'kitchen'",
 				"really fucking late into the night": "'room'"
 			}
@@ -80,14 +80,14 @@
 			"Weekday": {
 				"morning": "'kitchen'",
 				"afternoon": "'work'",
-				"evening": "(Math.random() * 10) ? ((Math.random() * 10) ? 'work' : 'kitchen' ) : 'bar'",
-				"night-time": "gameData.npcs.mom.previousLocation === 'bar' ? 'bar' : gameData.npcs.mom.previousLocation === 'kitchen' ? 'kitchen' : ((Math.random() * 5) ? 'kitchen' : 'work')",
+				"evening": "Math.floor(Math.random() * 10) ? (Math.floor(Math.random() * 10) ? 'work' : 'kitchen' ) : 'bar'",
+				"night-time": "gameData.npcs.mom.previousLocation === 'bar' ? 'bar' : (gameData.npcs.mom.previousLocation === 'kitchen' ? 'kitchen' : (Math.floor(Math.random() * 5) ? 'kitchen' : 'work'))",
 				"really fucking late into the night": "gameData.npcs.mom.previousLocation === 'kitchen' ? 'room' : 'kitchen'"
 			},
 			"Friday": {
 				"morning": "'kitchen'",
 				"afternoon": "'work'",
-				"evening": "(Math.random() * 5) ? 'kitchen' : 'bar'",
+				"evening": "Math.floor(Math.random() * 5) ? 'kitchen' : 'bar'",
 				"night-time": "gameData.npcs.mom.previousLocation",
 				"really fucking late into the night": "'kitchen'"
 			},

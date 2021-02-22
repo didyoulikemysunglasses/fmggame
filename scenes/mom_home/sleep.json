@@ -5,12 +5,12 @@
 			"textLocation": "./text/mom_home/player_room/sleep/sleep_part1.txt"
 		},
 		{
-			"condition": "gameData.player.muscle.upper.worked",
-			"textLocation": "./text/mom_home/player_room/sleep/sleep_part2_lower_increase.txt"
-		},
-		{
 			"condition": "gameData.player.muscle.lower.worked",
 			"textLocation": "./text/mom_home/player_room/sleep/sleep_part2_lower_increase.txt"
+        },
+        {
+			"condition": "gameData.player.muscle.upper.worked",
+			"textLocation": "./text/mom_home/player_room/sleep/sleep_part2_upper_increase.txt"
 		},
 		{
 			"condition": "true",

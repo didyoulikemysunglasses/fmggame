@@ -44,32 +44,106 @@
 		"Friday": "Friday",
 		"Saturday": "Saturday",
 		"Sunday": "Sunday"
-	},
+    },
+    "fightScripts": {
+        "executeMoves": "eval(staticData.fightScripts.prepareMoves); if (gameData.currentFight.player.speed > gameData.currentFight.opponent.speed) { eval(staticData.fightScripts.executePlayerFirst) } else { eval(staticData.fightScripts.executePlayerLast) } false;",
+        "executePlayerFirst": "const actionTaker = gameData.currentFight.player; const waitingPerson = gameData.currentFight.opponent; eval(staticData.fightScripts.moveExecuteScripts[staticData.fightMoves[actionTaker.currentMove].moveType]); if (waitingPerson.hp) { const actionTaker = gameData.currentFight.opponent; const waitingPerson = gameData.currentFight.player; eval(staticData.fightScripts.moveExecuteScripts[staticData.fightMoves[actionTaker.currentMove].moveType]); } waitingPerson.previousMove = waitingPerson.currentMove; actionTaker.previousMove = actionTaker.currentMove;",
+        "executePlayerLast": "const actionTaker = gameData.currentFight.opponent; const waitingPerson = gameData.currentFight.player; eval(staticData.fightScripts.moveExecuteScripts[staticData.fightMoves[actionTaker.currentMove].moveType]); if (waitingPerson.hp) { const actionTaker = gameData.currentFight.player; const waitingPerson = gameData.currentFight.opponent; eval(staticData.fightScripts.moveExecuteScripts[staticData.fightMoves[actionTaker.currentMove].moveType]); } waitingPerson.previousMove = waitingPerson.currentMove; actionTaker.previousMove = actionTaker.currentMove;",
+        "prepareMoves": "let mover = gameData.currentFight.player; mover.currentMove = playerMoveName; eval(staticData.fightScripts.prepareMove); mover = gameData.currentFight.opponent; mover.currentMove = eval(staticData.npcFightStats[mover.key].moveScript); eval(staticData.fightScripts.prepareMove);",
+        "prepareMove": "const move = staticData.fightMoves[mover.currentMove]; eval(staticData.fightScripts.movePrepareScripts[move.moveType]);",
+        "determineMoveAmount": "const roll = Math.floor(Math.random() * move.diceAmount); roll ? Math.floor(mover[move.muscleType] * move.baseModifier + ((mover[move.muscleType] * move.rollModifier * roll) / move.diceAmount)) : Math.floor(mover[move.muscleType] * move.baseModifier + mover[move.muscleType] * move.criticalRollModifier)",
+        "movePrepareScripts": {
+            "attack": "const amount = eval(staticData.fightScripts.determineMoveAmount); mover.attackAmount = amount; mover.defendAmount = 0; mover.moveText = ''",
+            "defend": "const amount = eval(staticData.fightScripts.determineMoveAmount); mover.attackAmount = 0; mover.defendAmount = amount; mover.moveText = ''",
+            "description": "mover.attackAmount = 0; mover.defendAmount = 0; mover.moveText = ''"
+        },
+        "moveExecuteScripts": {
+            "attack": "let netAttackAmount = actionTaker.attackAmount - waitingPerson.defendAmount; if (netAttackAmount < 0) { netAttackAmount = 0; } waitingPerson.hp = waitingPerson.hp - netAttackAmount; if (waitingPerson.hp < 0) { waitingPerson.hp = 0; } actionTaker.moveText = (actionTaker === gameData.currentFight.player ? 'I use ' + staticData.fightMoves[actionTaker.currentMove].name + '. It inflicts ' + netAttackAmount + ' damage.' : actionTaker.name + ' uses ' + staticData.fightMoves[actionTaker.currentMove].name + '. It inflicts ' + netAttackAmount + ' damage.');",
+            "defend": "actionTaker.moveText = (actionTaker === gameData.currentFight.player ? 'I use ' + staticData.fightMoves[actionTaker.currentMove].name + '. Incoming attacks this turn are reduced.' : actionTaker.name + ' uses ' + staticData.fightMoves[actionTaker.currentMove].name + '. Incoming attacks this turn are reduced.');",
+            "description": "actionTaker.moveText = staticData.fightMoves[actionTaker.currentMove].text"
+        }
+    },
+    "fightMoves": {
+        "punch": {
+            "name": "Punch",
+            "moveType": "attack",
+            "muscleType": "upper",
+            "baseModifier": 1.0,
+            "diceAmount": 20,
+            "rollModifier": 0.5,
+            "criticalRollModifier": 1.0
+        },
+        "kick": {
+            "name": "Kick",
+            "moveType": "attack",
+            "muscleType": "lower",
+            "baseModifier": 1.0, 
+            "diceAmount": 20,
+            "rollModifier": 0.5,
+            "criticalRollModifier": 1.0
+        },
+        "block": {
+            "name": "Block",
+            "moveType": "defend",
+            "muscleType": "upper",
+            "baseModifier": 0.5,
+            "diceAmount": 6, 
+            "rollModifier": 0.5,
+            "criticalRollModifier": 100.0
+        },
+        "brochargeup": {
+            "name": "Charge",
+            "moveType": "description",
+            "text": "Your brother brings his fist back... He's charging up!"
+        },
+        "legendaryFistOfTheOlderBrother": {
+            "name": "Legendary Fist of the Older Brother",
+            "moveType": "attack",
+            "muscleType": "upper",
+            "baseModifier": 1.5,
+            "diceAmount": 10,
+            "rollModifier": 1.5,
+            "criticalRollModifier": 2.0
+        }
+    },
+    "npcFightStats": {
+        "brother": {
+            "maxHp": 160,
+            "speed": 6,
+            "upper": 12,
+            "lower": 6,
+            "exp": {
+                "upper": 20,
+                "lower": 10
+            },
+            "moveScript": "gameData.currentFight.opponent.previousMove === 'brochargeup' ? 'legendaryFistOfTheOlderBrother' : (Math.floor(Math.random() * 4) ? ( Math.floor(Math.random() * 2) ? 'punch' : 'kick' ) : 'brochargeup')"
+        }
+    },
 	"npcSchedules": {
 		"brother": {
 			"Weekday": {
-				"morning": "gameData.npcs.brother.roomLocked = false; 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; gameData.npcs.brother.beatUp = false; 'kitchen'",
 				"afternoon": "'work'",
 				"evening": "Math.floor(Math.random() * 4) ? 'bar' : 'kitchen'",
 				"night-time": "gameData.npcs.brother.previousLocation === 'bar' ? 'kitchen' : 'room'",
 				"really fucking late into the night": "'room'"
 			},
 			"Friday": {
-				"morning": "gameData.npcs.brother.roomLocked = false; 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; gameData.npcs.brother.beatUp = false; 'kitchen'",
 				"afternoon": "'work'",
 				"evening": "'bar'",
 				"night-time": "'bar'",
 				"really fucking late into the night": "'kitchen'"
 			},
 			"Saturday": {
-				"morning": "gameData.npcs.brother.roomLocked = false; Math.floor(Math.random() * 2) ? 'room' : 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; gameData.npcs.brother.beatUp = false; Math.floor(Math.random() * 2) ? 'room' : 'kitchen'",
 				"afternoon": "Math.floor(Math.random() * 2) ? 'jog' : 'gym'",
 				"evening": "'bar'",
 				"night-time": "'bar'",
 				"really fucking late into the night": "'bar'"
 			},
 			"Sunday": {
-				"morning": "gameData.npcs.brother.roomLocked = false; Math.floor(Math.random() * 2) ? 'room' : 'kitchen'",
+				"morning": "gameData.npcs.brother.roomLocked = false; gameData.npcs.brother.beatUp = false; Math.floor(Math.random() * 2) ? 'room' : 'kitchen'",
 				"afternoon": "'kitchen'",
 				"evening": "Math.floor(Math.random() * 2) ? 'jog' : 'gym'",
 				"night-time": "'kitchen'",

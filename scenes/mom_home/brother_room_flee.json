@@ -1,0 +1,28 @@
+{
+	"displayText": [
+		{
+			"condition": "true",
+			"textLocation": "./text/mom_home/brother_room/caught/flee.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "Anyways...",
+			"gameDataModifications": [
+                {
+					"name": "npcs.brother.currentLocation",
+					"staticValue": "room"
+                },
+                {
+					"name": "npcs.brother.roomLocked",
+					"staticValue": true
+                },
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/kitchen.json"
+				}
+			]
+		}
+	]
+}

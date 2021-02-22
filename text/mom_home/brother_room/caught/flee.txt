@@ -1,0 +1,11 @@
+...
+
+Fuck this...
+
+It's not worth fighting, I'm out of here...
+
+I quickly make my way out the door.
+
+"That's right! Stay out of my fucking room, %gameData.player.name%!" %gameData.npcs.brother.name% yells, slamming the door behind me.
+
+Jeez... He really doesn't want me using that weight set, huh?

@@ -19,14 +19,15 @@
 			}
 		},
 		"wakingUp": false,
-		"selfImageRating": 0
+        "selfImageRating": 0
 	},
 	"npcs": {
 		"brother": { 
 			"name": "Tom",
 			"currentLocation": "kitchen",
             "previousLocation": "kitchen",
-            "roomLocked": false
+            "roomLocked": false,
+            "beatUp": false
 		},
 		"mom": {
 			"currentLocation": "kitchen",
@@ -35,6 +36,35 @@
 	},
 	"currentDay": "Saturday",
 	"timeOfDay": "morning",
-	"currentScene": "./scenes/intro/intro1.json",
-	"time": 0
+    "currentScene": "./scenes/intro/intro1.json",
+    "currentFight": {
+        "opponent": {
+            "key": "",
+            "name": "",
+            "hp": 0,
+            "speed": 0,
+            "upper": 0,
+            "lower": 0,
+            "attackAmount": 0,
+            "defendAmount": 0,
+            "currentMove": "",
+            "previousMove": "",
+            "moveText": ""
+        },
+        "player": {
+            "hp": 0,
+            "speed": 0,
+            "upper": 0,
+            "lower": 0,
+            "attackAmount": 0,
+            "defendAmount": 0,
+            "currentMove": "",
+            "previousMove": "",
+            "moveText": ""
+        },
+        "newFight": true,
+        "winScene": "",
+        "lossScene": "",
+        "fleeScene": ""
+    }
 }

@@ -1,0 +1,1 @@
+%gameData.currentFight.opponent.name% would like to fight!

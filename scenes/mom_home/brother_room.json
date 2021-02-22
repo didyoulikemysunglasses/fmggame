@@ -32,7 +32,7 @@
 			"gameDataModifications": [
 				{
 					"name": "currentScene",
-					"dynamicValue": "(gameData.npcs.brother.currentLocation === 'room' || gameData.npcs.brother.currentLocation === 'kitchen') ? './scenes/mom_home/brother_room_caught_before.json' : './scenes/mom_home/brother_room_bench.json'"
+					"dynamicValue": "((gameData.npcs.brother.currentLocation === 'room' || gameData.npcs.brother.currentLocation === 'kitchen') && !gameData.npcs.brother.beatUp) ? './scenes/mom_home/brother_room_caught_before.json' : './scenes/mom_home/brother_room_bench.json'"
 				}
 			]
 		},

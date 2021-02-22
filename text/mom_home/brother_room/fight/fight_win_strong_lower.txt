@@ -1,0 +1,11 @@
+"Damn..." %gameData.npcs.brother.name% utters after taking another kick me, struggling to stand.
+
+"What's wrong?" I ask, giving him another kick and sending him to the ground. "I bet you didn't realize your little sister had powerful legs like these, huh?"
+
+%gameData.npcs.brother.name% looks up at me for a second. "Pshhh... Whatever! I've still got you beat where it counts... You just got lucky..."
+
+%gameData.npcs.brother.name% slowly gets up off the ground, dusts himself off and heads for the door.
+
+"You better watch out..." I say, playfully stretching my leg out on the bench press. "If I keep using this bench press and you don't, you might not have me 'beat where it counts' anymore..."
+
+"-Yeah right..." He says, heading out the door. "-Y... -you got lucky!"

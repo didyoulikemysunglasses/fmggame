@@ -1,0 +1,110 @@
+{
+	"displayText": [
+        {
+			"condition": "gameData.currentFight.newFight",
+			"textLocation": "./text/fight/fight_intro.txt"
+		},
+        {
+			"condition": "gameData.currentFight.player.speed > gameData.currentFight.opponent.speed && gameData.currentFight.player.moveText",
+			"textLocation": "./text/fight/player_turn.txt"
+        },
+        {
+			"condition": "gameData.currentFight.opponent.moveText",
+			"textLocation": "./text/fight/opponent_turn.txt"
+        },
+        {
+			"condition": "gameData.currentFight.player.speed <= gameData.currentFight.opponent.speed && gameData.currentFight.player.moveText",
+			"textLocation": "./text/fight/player_turn.txt"
+        },
+        {
+			"condition": "true",
+			"textLocation": "./text/fight/fight_hp.txt"
+        },
+        {
+			"condition": "gameData.currentFight.opponent.hp && gameData.currentFight.player.hp",
+			"textLocation": "./text/fight/fight_prompt.txt"
+        },
+        {
+			"condition": "!gameData.currentFight.player.hp",
+			"textLocation": "./text/fight/fight_defeat.txt"
+        },
+        {
+			"condition": "!gameData.currentFight.opponent.hp",
+			"textLocation": "./text/fight/fight_victory.txt"
+        }
+	],
+	"choices": [
+		{
+			"condition": "gameData.currentFight.opponent.hp && gameData.currentFight.player.hp",
+			"choiceString": "Punch",
+			"gameDataModifications": [
+                {
+					"name": "currentFight.newFight",
+					"dynamicValue": "const playerMoveName = 'punch'; eval(staticData.fightScripts.executeMoves)"
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/fight.json"
+				}
+			]
+        },
+        {
+			"condition": "gameData.currentFight.opponent.hp && gameData.currentFight.player.hp",
+			"choiceString": "Kick",
+			"gameDataModifications": [
+                {
+					"name": "currentFight.newFight",
+					"dynamicValue": "const playerMoveName = 'kick'; eval(staticData.fightScripts.executeMoves)"
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/fight.json"
+				}
+			]
+        },
+        {
+			"condition": "gameData.currentFight.opponent.hp && gameData.currentFight.player.hp",
+			"choiceString": "Block",
+			"gameDataModifications": [
+                {
+					"name": "currentFight.newFight",
+					"dynamicValue": "const playerMoveName = 'block'; eval(staticData.fightScripts.executeMoves)"
+				},
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/fight.json"
+				}
+			]
+        },
+        {
+			"condition": "gameData.currentFight.opponent.hp && gameData.currentFight.player.hp",
+			"choiceString": "Run Away",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"dynamicValue": "gameData.currentFight.fleeScene"
+				}
+			]
+        },
+        {
+			"condition": "!gameData.currentFight.opponent.hp",
+			"choiceString": "Oh yeah!",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"dynamicValue": "gameData.currentFight.winScene"
+				}
+			]
+        },
+        {
+			"condition": "!gameData.currentFight.player.hp",
+			"choiceString": "Ouch...",
+			"gameDataModifications": [
+				{
+					"name": "currentScene",
+					"dynamicValue": "gameData.currentFight.lossScene"
+				}
+			]
+		}
+	]
+}

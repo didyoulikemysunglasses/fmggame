@@ -1,0 +1,36 @@
+{
+	"displayText": [
+		{
+			"condition": "gameData.player.muscle.lower.level <= staticData.npcFightStats.brother.lower && gameData.player.muscle.upper.level <= staticData.npcFightStats.brother.upper",
+			"textLocation": "./text/mom_home/brother_room/fight/fight_win_weak.txt"
+        },
+        {
+			"condition": "gameData.player.muscle.lower.level > staticData.npcFightStats.brother.lower && gameData.player.muscle.upper.level <= staticData.npcFightStats.brother.upper",
+			"textLocation": "./text/mom_home/brother_room/fight/fight_win_strong_lower.txt"
+        },
+        {
+			"condition": "gameData.player.muscle.upper.level > staticData.npcFightStats.brother.upper",
+			"textLocation": "./text/mom_home/brother_room/fight/fight_win_strong_upper.txt"
+		}
+	],
+	"choices": [
+		{
+			"condition": "true",
+			"choiceString": "So... Where was I...",
+			"gameDataModifications": [
+                {
+					"name": "npcs.brother.currentLocation",
+					"staticValue": "kitchen"
+                },
+                {
+					"name": "npcs.brother.beatUp",
+					"staticValue": true
+                },
+				{
+					"name": "currentScene",
+					"staticValue": "./scenes/mom_home/brother_room.json"
+				}
+			]
+		}
+	]
+}

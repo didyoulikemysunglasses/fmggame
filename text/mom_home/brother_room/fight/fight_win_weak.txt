@@ -1,0 +1,15 @@
+"How the fuck-" %gameData.npcs.brother.name% exclaims from the ground.
+
+...
+
+Honestly, I can't really believe it myself...
+
+I'm physically weaker than him in every way...
+
+But I did win, so I'll take it.
+
+"Sorry bro, looks like your bench press is mine for the day! -Even though you should probably be the one using it... -getting your ass beat like this..."
+
+%gameData.npcs.brother.name% looks up at me for a second, then scrambles up and heads for the door.
+
+"-You got lucky!" He quips on the way out.

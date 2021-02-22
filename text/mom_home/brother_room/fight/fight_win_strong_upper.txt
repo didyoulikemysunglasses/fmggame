@@ -1,0 +1,13 @@
+"How..." %gameData.npcs.brother.name% utters in horror, as I give him one last punch in the stomach, dropping him to the ground.
+
+"How?" I mock playfully, walking over his prone body. "I guess someone's been hitting the weight's more than you, that's how."
+
+"Pshhh... Bullshit..." He mutters.
+
+"You sure about that?" I ask, slowly pulling up the sleave on my shirt. "I've been working out quite a bit..."
+
+%gameData.npcs.brother.name% is completely quiet.
+
+I look down and shoot him a devious smile while I flex him a %eval(staticData.sizeFormulas.arms)% inch bicep with my right arm.
+
+"Now get out of here... Unless you were hoping to watch me workout or someting... I don't really care either way..."

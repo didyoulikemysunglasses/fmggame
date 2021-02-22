@@ -2,11 +2,7 @@
 	"displayText": [
 		{
 			"condition": "true",
-			"textLocation": "./text/mom_home/brother_room/fight/fight_part1.txt"
-		},
-		{
-			"condition": "true",
-			"textLocation": "./text/mom_home/brother_room/fight/fight_part2_weak.txt"
+			"textLocation": "./text/mom_home/brother_room/fight/fight_loss.txt"
 		}
 	],
 	"choices": [

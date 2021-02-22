@@ -10,9 +10,61 @@
 			"condition": "true",
 			"choiceString": "Fight",
 			"gameDataModifications": [
+                {
+                    "name": "currentFight.opponent.key",
+                    "staticValue": "brother"
+                },
+                {
+                    "name": "currentFight.opponent.name",
+                    "dynamicValue": "gameData.npcs.brother.name"
+                },
+                {
+                    "name": "currentFight.opponent.hp",
+                    "dynamicValue": "staticData.npcFightStats.brother.maxHp"
+                },
+                {
+                    "name": "currentFight.opponent.upper",
+                    "dynamicValue": "staticData.npcFightStats.brother.upper"
+                },
+                {
+                    "name": "currentFight.opponent.lower",
+                    "dynamicValue": "staticData.npcFightStats.brother.lower"
+                },
+                {
+                    "name": "currentFight.opponent.speed",
+                    "dynamicValue": "staticData.npcFightStats.brother.speed"
+                },
+                {
+                    "name": "currentFight.player.hp",
+                    "dynamicValue": "Math.floor(eval(staticData.sizeFormulas.weight))"
+                },
+                {
+                    "name": "currentFight.player.upper",
+                    "dynamicValue": "gameData.player.muscle.upper.level"
+                },
+                {
+                    "name": "currentFight.player.lower",
+                    "dynamicValue": "gameData.player.muscle.lower.level"
+                },
+                {
+                    "name": "currentFight.player.speed",
+                    "dynamicValue": "gameData.player.muscle.lower.level"
+                },
+                {
+					"name": "currentFight.winScene",
+					"staticValue": "./scenes/mom_home/brother_room_fight_won.json"
+                },
+                {
+					"name": "currentFight.lossScene",
+					"staticValue": "./scenes/mom_home/brother_room_fight_loss.json"
+                },
+                {
+					"name": "currentFight.fleeScene",
+					"staticValue": "./scenes/mom_home/brother_room_flee.json"
+				},
 				{
 					"name": "currentScene",
-					"staticValue": "./scenes/mom_home/brother_room_fight.json"
+					"staticValue": "./scenes/fight.json"
 				}
 			]
 		},
@@ -20,17 +72,9 @@
 			"condition": "true",
 			"choiceString": "Run Away",
 			"gameDataModifications": [
-                {
-					"name": "npcs.brother.currentLocation",
-					"staticValue": "room"
-                },
-                {
-					"name": "npcs.brother.roomLocked",
-					"staticValue": true
-                },
 				{
 					"name": "currentScene",
-					"staticValue": "./scenes/mom_home/kitchen.json"
+					"staticValue": "./scenes/mom_home/brother_room_flee.json"
 				}
 			]
 		}

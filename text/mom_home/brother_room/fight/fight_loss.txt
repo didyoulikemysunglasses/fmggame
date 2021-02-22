@@ -1,14 +1,10 @@
-He seems a little caught off guard by that...
-
-I clench my hand into a fist...
-
--and punch him square in the face.
+I'm outmatched...
 
 ...
 
-Owwwwwwww! Holy shit, that really hurt my hand!
+I'm still standing... -but I don't have much fight left in me...
 
--and it doesn't look like it did anything to him at all.
+%gameData.npcs.brother.name% stands opposite of me.
 
 "Dear sister, I am a believer in gender equality." He says with a smile.
 

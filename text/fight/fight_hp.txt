@@ -1,0 +1,3 @@
+%gameData.player.name% HP: %gameData.currentFight.player.hp%
+
+%gameData.currentFight.opponent.name% HP: %gameData.currentFight.opponent.hp%

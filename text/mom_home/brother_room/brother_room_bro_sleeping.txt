@@ -1,4 +1,4 @@
-I walk into %gameData.npcs.brother.name%'s room.
+%gameData.npcs.brother.name% is in his room.
 
 The dumb idiot is still asleep this morning...
 

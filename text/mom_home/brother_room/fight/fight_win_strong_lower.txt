@@ -1,4 +1,4 @@
-"Damn..." %gameData.npcs.brother.name% utters after taking another kick me, struggling to stand.
+"Damn..." %gameData.npcs.brother.name% utters after taking another kick from me, struggling to stand.
 
 "What's wrong?" I ask, giving him another kick and sending him to the ground. "I bet you didn't realize your little sister had powerful legs like these, huh?"
 

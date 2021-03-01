@@ -5,11 +5,15 @@
 			"textLocation": "./text/mom_home/brother_room/brother_room_empty.txt"
         },
         {
-			"condition": "!gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation === 'room' && gameData.timeOfDay !== 'morning'",
+			"condition": "!gameData.npcs.brother.roomLocked && gameData.npcs.brother.beatUp && gameData.npcs.brother.currentLocation === 'room'",
+			"textLocation": "./text/mom_home/brother_room/brother_room_bro_beat_up.txt"
+        },
+        {
+			"condition": "!gameData.npcs.brother.roomLocked && !gameData.npcs.brother.beatUp && gameData.npcs.brother.currentLocation === 'room' && gameData.timeOfDay !== 'morning'",
 			"textLocation": "./text/mom_home/brother_room/brother_room_bro_awake.txt"
         },
         {
-			"condition": "!gameData.npcs.brother.roomLocked && gameData.npcs.brother.currentLocation === 'room' && gameData.timeOfDay === 'morning'",
+			"condition": "!gameData.npcs.brother.roomLocked && !gameData.npcs.brother.beatUp && gameData.npcs.brother.currentLocation === 'room' && gameData.timeOfDay === 'morning'",
 			"textLocation": "./text/mom_home/brother_room/brother_room_bro_sleeping.txt"
         },
         {

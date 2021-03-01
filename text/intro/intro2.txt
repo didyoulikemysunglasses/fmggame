@@ -10,7 +10,7 @@ While I eat, I hear the door open.
 
 My meathead of an older brother, %gameData.npcs.brother.name%, walks in with a goofy smile on his face.
 
-He towers over both me and Mom at 6'0" tall, at a somewhat solid 180lbs.
+He towers over both me and Mom at 5'10" tall, at a somewhat solid 160lbs.
 
 "Guess who just landed a Job!" %gameData.npcs.brother.name% exclaims.
 

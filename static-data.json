@@ -86,9 +86,9 @@
             "name": "Block",
             "moveType": "defend",
             "muscleType": "upper",
-            "baseModifier": 0.5,
-            "diceAmount": 6, 
-            "rollModifier": 0.5,
+            "baseModifier": 1.0,
+            "diceAmount": 4, 
+            "rollModifier": 2.0,
             "criticalRollModifier": 100.0
         },
         "brochargeup": {

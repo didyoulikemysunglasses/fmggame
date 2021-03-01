@@ -1,0 +1,11 @@
+%gameData.npcs.brother.name% is in his room.
+
+"Oh... Hey sis..." %gameData.npcs.brother.name% says nervously.
+
+He's probably still shaken from getting his ass beaten earlier...
+
+%gameData.npcs.brother.name% has a bench press in here with a few small weights that can be swapped in and out on the bar in the room...
+
+"You cool if I use your weights? I might be looking to get an upper body workout in here..." I say, giving my %eval(staticData.sizeFormulas.chest)% inch chest a slight flex.
+
+"Oh uh... Go ahead..." He says meekly, turning onto his side away from me and pulling out his phone.

@@ -5,15 +5,15 @@
 			"textLocation": "./text/fight/fight_intro.txt"
 		},
         {
-			"condition": "gameData.currentFight.player.speed > gameData.currentFight.opponent.speed && gameData.currentFight.player.moveText",
+			"condition": "!gameData.currentFight.newFight && gameData.currentFight.player.speed > gameData.currentFight.opponent.speed && gameData.currentFight.player.moveText",
 			"textLocation": "./text/fight/player_turn.txt"
         },
         {
-			"condition": "gameData.currentFight.opponent.moveText",
+			"condition": "!gameData.currentFight.newFight && gameData.currentFight.opponent.moveText",
 			"textLocation": "./text/fight/opponent_turn.txt"
         },
         {
-			"condition": "gameData.currentFight.player.speed <= gameData.currentFight.opponent.speed && gameData.currentFight.player.moveText",
+			"condition": "!gameData.currentFight.newFight && gameData.currentFight.player.speed <= gameData.currentFight.opponent.speed && gameData.currentFight.player.moveText",
 			"textLocation": "./text/fight/player_turn.txt"
         },
         {

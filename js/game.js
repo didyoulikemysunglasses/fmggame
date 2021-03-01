@@ -116,7 +116,8 @@ async function loadCurrentScene() {
 	document.getElementById('textParagraph').innerHTML = '';
 
 	// Get Current Game Data.
-	const gameData = await this.getGameData();
+    const gameData = await this.getGameData();
+    const staticData = await this.getStaticData();
 
 	const sceneResponse = await fetch(gameData.currentScene);
 	const sceneResult = await sceneResponse.text();

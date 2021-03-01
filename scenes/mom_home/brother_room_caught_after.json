@@ -10,6 +10,10 @@
 			"condition": "true",
 			"choiceString": "Fight",
 			"gameDataModifications": [
+                {
+                    "name": "currentFight.newFight",
+                    "staticValue": true
+                },
 				{
                     "name": "currentFight.opponent.key",
                     "staticValue": "brother"

@@ -1,15 +1,27 @@
 {
 	"displayText": [
+        {
+            "condition": "gameData.npcs.brother.currentLocation === 'kitchen' && gameData.npcs.brother.beatUp",
+            "textLocation": "./text/mom_home/kitchen/kitchen_brother_beat_up_part1.txt"
+        },
+        {
+            "condition": "gameData.npcs.brother.currentLocation === 'kitchen' && gameData.npcs.brother.beatUp && gameData.player.muscle.upper.level <= staticData.npcFightStats.brother.upper",
+            "textLocation": "./text/mom_home/kitchen/kitchen_brother_beat_up_part2_weaker.txt"
+        },
+        {
+            "condition": "gameData.npcs.brother.currentLocation === 'kitchen' && gameData.npcs.brother.beatUp && gameData.player.muscle.upper.level > staticData.npcFightStats.brother.upper",
+            "textLocation": "./text/mom_home/kitchen/kitchen_brother_beat_up_part2_stronger.txt"
+        },
 		{
 			"condition": "gameData.timeOfDay === 'morning' && gameData.npcs.brother.currentLocation !== 'kitchen'",
 			"textLocation": "./text/mom_home/kitchen/kitchen_morning_part1_mom.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay === 'morning' && gameData.npcs.brother.currentLocation === 'kitchen'",
+			"condition": "gameData.timeOfDay === 'morning' && gameData.npcs.brother.currentLocation === 'kitchen' && !gameData.npcs.brother.beatUp",
 			"textLocation": "./text/mom_home/kitchen/kitchen_morning_part1_mom_and_bro.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay === 'morning' && gameData.npcs.brother.currentLocation === 'kitchen' && (staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Weekday' || staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Friday')",
+			"condition": "gameData.timeOfDay === 'morning' && gameData.npcs.brother.currentLocation === 'kitchen' && !gameData.npcs.brother.beatUp && (staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Weekday' || staticData.dayOfTheWeekToScheduleDay[gameData.currentDay] === 'Friday')",
 			"textLocation": "./text/mom_home/kitchen/kitchen_morning_part2_mom_and_bro_weekday.txt"
 		},
 		{
@@ -37,11 +49,11 @@
 			"textLocation": "./text/mom_home/kitchen/kitchen_empty_part2_mom_and_bro.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation !== 'kitchen' && gameData.npcs.brother.currentLocation === 'kitchen'",
+			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation !== 'kitchen' && gameData.npcs.brother.currentLocation === 'kitchen' && !gameData.npcs.brother.beatUp",
 			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_bro.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation === 'kitchen'",
+			"condition": "gameData.timeOfDay !== 'morning' && gameData.timeOfDay !== 'really fucking late into the night' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.brother.currentLocation === 'kitchen' && !gameData.npcs.brother.beatUp",
 			"textLocation": "./text/mom_home/kitchen/kitchen_not_morning_part1_mom_and_bro.txt"
         },
         {
@@ -57,11 +69,11 @@
 			"textLocation": "./text/mom_home/kitchen/kitchen_late_part1.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay === 'really fucking late into the night' && gameData.npcs.brother.currentLocation === 'kitchen' && gameData.npcs.brother.previousLocation === 'bar' && (gameData.npcs.mom.currentLocation !== 'kitchen' || gameData.npcs.mom.previousLocation !== 'bar')",
+			"condition": "gameData.timeOfDay === 'really fucking late into the night' && gameData.npcs.brother.currentLocation === 'kitchen' && !gameData.npcs.brother.beatUp && gameData.npcs.brother.previousLocation === 'bar' && (gameData.npcs.mom.currentLocation !== 'kitchen' || gameData.npcs.mom.previousLocation !== 'bar')",
 			"textLocation": "./text/mom_home/kitchen/kitchen_late_part2_brother_bar.txt"
 		},
 		{
-			"condition": "gameData.timeOfDay === 'really fucking late into the night' && gameData.npcs.brother.currentLocation === 'kitchen' && gameData.npcs.brother.previousLocation === 'bar' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.mom.previousLocation === 'bar'",
+			"condition": "gameData.timeOfDay === 'really fucking late into the night' && gameData.npcs.brother.currentLocation === 'kitchen' && !gameData.npcs.brother.beatUp && gameData.npcs.brother.previousLocation === 'bar' && gameData.npcs.mom.currentLocation === 'kitchen' && gameData.npcs.mom.previousLocation === 'bar'",
 			"textLocation": "./text/mom_home/kitchen/kitchen_late_part2_mom_and_brother_bar.txt"
 		},
 		{

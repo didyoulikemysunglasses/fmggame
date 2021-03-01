@@ -1,4 +1,4 @@
-I walk into %gameData.npcs.brother.name%'s room.
+%gameData.npcs.brother.name% is in his room.
 
 "What's up, sis." %gameData.npcs.brother.name% says casually.
 

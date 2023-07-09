@@ -1,0 +1,10 @@
+{
+  "name": "fmggame",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
